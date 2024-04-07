@@ -28,7 +28,7 @@ trait Versionable
                 if (static::$versioning && $model->versions()->count() === 0) {
                     $existingModel = self::find($model->id);
 
-                    Version::createForModel($existingModel, $existingModel->only($existingModel->getVersionable()));
+                    $existingModel && Version::createForModel($existingModel, $existingModel->only($existingModel->getVersionable()));
                 }
             }
         );
