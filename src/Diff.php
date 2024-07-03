@@ -15,8 +15,7 @@ class Diff
         public Version $toVersion,
         public array $differOptions = [],
         public array $renderOptions = []
-    ) {
-    }
+    ) {}
 
     public function toArray(array $differOptions = [], array $renderOptions = []): array
     {
